@@ -119,7 +119,7 @@ function style(feature) {
   };
 }
 
-fetch('all_countries.geojson')
+fetch('./all_countries.geojson')
   .then(res => res.json())
   .then(data => {
     L.geoJSON(data, {
@@ -143,13 +143,13 @@ fetch('all_countries.geojson')
   .catch(err => console.error('Erreur lors du chargement du GeoJSON', err));
 
   const attentionIcon = L.icon({
-  iconUrl: 'attention.png',
+  iconUrl: './assets/attention.png',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
 });
 
 const dangerIcon = L.icon({
-  iconUrl: 'danger.png',
+  iconUrl: './assets/danger.png',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
 });
