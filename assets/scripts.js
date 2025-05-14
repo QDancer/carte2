@@ -86,15 +86,6 @@ var baseMaps = {
 
 
 
-// Détecter le changement de couche pour activer/désactiver le mode sombre
-map.on('baselayerchange', function(event) {
-  if (event.name === "Dark") { 
-    document.body.classList.add('dark-mode'); 
-  } else {
-    document.body.classList.remove('dark-mode'); 
-  }
-});
-
 /* === Gestion des événements de la carte === */
 // Détection de mouvement de la carte
 map.on('dragstart', function () {
@@ -152,13 +143,13 @@ fetch('all_countries.geojson')
   .catch(err => console.error('Erreur lors du chargement du GeoJSON', err));
 
   const attentionIcon = L.icon({
-  iconUrl: '/attention.png',
+  iconUrl: 'attention.png',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
 });
 
 const dangerIcon = L.icon({
-  iconUrl: '/danger.png',
+  iconUrl: 'danger.png',
   iconSize: [32, 32],
   iconAnchor: [16, 32],
 });
