@@ -142,14 +142,14 @@ fetch('./all_countries.geojson')
   })
   .catch(err => console.error('Erreur lors du chargement du GeoJSON', err));
 
-  const attentionIcon = L.icon({
-  iconUrl: './assets/attention.png',
+const attentionIcon = L.icon({
+  iconUrl: attentionPng, // PAS un chemin texte, mais la variable importée
   iconSize: [32, 32],
   iconAnchor: [16, 32],
 });
 
 const dangerIcon = L.icon({
-  iconUrl: './assets/danger.png',
+  iconUrl: dangerPng,
   iconSize: [32, 32],
   iconAnchor: [16, 32],
 });

@@ -10,12 +10,6 @@ import './assets/countries.js';
 import attentionPng from './assets/attention.png';
 import dangerPng from './assets/danger.png';
 
-// Injecte dynamiquement la feuille de style
-const style = document.createElement('link');
-style.rel = 'stylesheet';
-style.href = '/dist/carte.bundle.css';
-document.head.appendChild(style);
-
 // Exposer Leaflet et les images globalement
 window.L = L;
 window.attentionPng = attentionPng;
